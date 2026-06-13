@@ -40,30 +40,6 @@ PCS reduces semantically irrelevant predictions and produces cleaner tracklets i
 
 
 
-## Repository Layout
-
-```text
-RTOVTrack/
-  assets/                 Paper draft and README figures
-  configs/
-    pretrain/             YOLO-World pretraining configs
-    train_lvis/           RTOVTrack LVIS training config
-  demo/
-    mot_demo.py           Local video/image tracking demo
-  requirements/           Python dependency lists
-  yolo_world/
-    datasets/             LVIS/TAO/video dataset adapters and transforms
-    models/
-      PCS/                Prompt-Conditioned Suppression
-      dense_heads/        YOLO-World head with tracking outputs
-      mot/                YOLOWorldSort MOT wrapper with DMPM
-      tracker/            OV/SORT-style association modules
-    engine/               Optimizer constructor
-    hooks/                Training/logging hooks
-```
-
-Large local assets such as datasets, pretrained models, work directories, evaluation outputs, and `third_party/` are intentionally ignored by Git.
-
 ## Installation
 
 This code is developed around OpenMMLab and YOLO-World/MMYOLO components. A typical setup is:
@@ -128,6 +104,9 @@ pretrained_models/
   clip-vit-base-patch32-projection/
 ```
 
+The RTOVTrack model weights and training config files will be released after the paper is published.
+
+
 ## Training
 
 The current LVIS tracking-head config is:
@@ -176,10 +155,9 @@ The paper draft reports:
 - TAO test novel-category TETA: 29.1 for RTOVTrack+.
 - Runtime: 24.5 FPS under the adopted GPU inference protocol.
 
-Please refer to the paper draft for complete tables, benchmark settings, and ablations.
-
 
 
 ## Acknowledgement
 
-This project builds on the OpenMMLab ecosystem and YOLO-World/MMYOLO codebase. Parts of the dataset and tracking utilities are adapted from open-vocabulary and OpenMMLab tracking projects.
+This project is built upon the OpenMMLab ecosystem and benefits from the excellent open-source projects including MMYOLO, MMDetection, and YOLO-World. In particular, we use MMYOLO as a third-party submodule under `third_party/mmyolo` and follow the YOLO-World/MMYOLO codebase for open-vocabulary detection components. We sincerely thank the authors and contributors for releasing their valuable code to the community.
+
