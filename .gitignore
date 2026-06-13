@@ -38,7 +38,7 @@ dist/
 /cmd.txt
 
 # Vendored or locally checked out dependencies
-/third_party/
+/third_party/mmyolo_backup/
 
 # Datasets and local annotations.
 # Keep small class text files that are referenced by configs.
