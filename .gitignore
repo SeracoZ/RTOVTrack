@@ -1,0 +1,78 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and local Python installs
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+build/
+dist/
+
+# IDE/editor metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environment and secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Codex/agent local context
+.agents/
+.codex/
+
+# Local scratch files
+/cmd.txt
+
+# Vendored or locally checked out dependencies
+/third_party/
+
+# Datasets and local annotations.
+# Keep small class text files that are referenced by configs.
+/data/*
+/demo/
+/tools/
+
+/configs/train_lvis/
+/configs/train_RT/
+
+# Model checkpoints, exported models, and pretrained model links
+/pretrained_models
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.engine
+*.tflite
+*.pb
+*.safetensors
+
+# Training, evaluation, and visualization outputs
+/work_dirs/
+/results/
+/outputs/
+/output/
+/runs/
+/logs/
+/wandb/
+/mlruns/
+/tensorboard/
+/vis/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
